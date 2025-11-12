@@ -1,0 +1,45 @@
+/* style.css - Single shared stylesheet */
+
+:root{
+  --accent:#0b63d6;
+  --dark:#0b2340;
+  --muted:#6b7280;
+  --maxw:1000px;
+  --pad:20px;
+  --radius:10px;
+}
+
+*{box-sizing:border-box}
+body{
+  font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  margin:0; color:var(--dark); line-height:1.6; background:#ffffff;
+}
+.container{max-width:var(--maxw); margin:0 auto; padding:var(--pad)}
+header{background:#f7fbff; border-bottom:1px solid #e6eefc}
+.site-head{display:flex; align-items:center; justify-content:space-between; gap:16px; padding:18px 0}
+.logo{display:flex; align-items:center; gap:12px; text-decoration:none; color:var(--dark)}
+.logo-img{width:64px; height:64px; border-radius:8px; object-fit:cover}
+.main-nav a{margin-left:14px; text-decoration:none; color:var(--dark); font-weight:600}
+.hero{display:flex; gap:24px; align-items:center; padding:40px 0}
+.hero .intro{flex:1}
+.h1{font-size:28px; margin:0 0 8px}
+.tagline{color:var(--accent); font-weight:700; font-size:18px}
+.cta{display:inline-block; margin:10px 6px 0; padding:10px 16px; background:var(--accent); color:white; text-decoration:none; border-radius:8px}
+.cta.outline{background:transparent; color:var(--accent); border:2px solid var(--accent)}
+.profile-img{width:220px; border-radius:12px; overflow:hidden}
+.section{padding:28px 0; border-top:1px solid #f0f3fb}
+.card{background:white; padding:16px; border-radius:var(--radius); box-shadow:0 6px 18px rgba(11,35,64,0.04)}
+.grid{display:grid; gap:18px; grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.project-title{font-weight:700; margin:0 0 8px}
+.small{color:var(--muted); font-size:14px}
+footer{padding:18px 0; color:var(--muted); border-top:1px solid #f0f3fb; text-align:center; margin-top:20px}
+.blog-list a{display:block; text-decoration:none; margin:10px 0}
+.contact-form input, .contact-form textarea{width:100%; padding:10px; margin:8px 0; border:1px solid #e6eefc; border-radius:8px}
+.btn{background:var(--accent); color:white; padding:10px 14px; border-radius:8px; text-decoration:none; display:inline-block; border:none; cursor:pointer}
+
+/* responsive */
+@media(max-width:880px){
+  .hero{flex-direction:column-reverse; text-align:center}
+  .profile-img{width:160px}
+  .main-nav{display:none}
+}
